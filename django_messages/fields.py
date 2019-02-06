@@ -15,7 +15,7 @@ User = get_user_model()
 class CommaSeparatedUserInput(widgets.Input):
     input_type = 'text'
 
-    def render(self, name, value, attrs={'hidden':True,'readonly':True}):
+    def render(self, name, value, attrs=None):
         if value is None:
             value = ''
         elif isinstance(value, (list, tuple)):
